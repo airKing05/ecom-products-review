@@ -35,8 +35,11 @@ function Review() {
 
   function deleteReview(paramsId) {
     fetch(`http://localhost:3002/api/reviews/${paramsId}`, { method: 'DELETE' })
-      .then(res => console.log("deleted ", paramsId))
-   // productReview() 
+      .then((res) => {
+        console.log("deleted ", paramsId)
+        productReview();
+      })
+   
   }
 
   //console.log("singleProduct", singleProduct)
